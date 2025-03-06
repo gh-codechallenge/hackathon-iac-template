@@ -1,4 +1,33 @@
-# Welcome to the TERRA Terraform Template
+# Welcome to the Guidehouse Hackathon Template
+
+## Pre-requisites
+
+Welcome to the Guidehouse Hackathon! We are excited to have you on board and look forward to seeing the amazing projects you will be working on. Before we get started, we would like to provide you with some information on how projects are operated within the Guidehouse Hackathon.
+
+1. **`Tools`**:
+    - `AWS Workspaces`: You will be provided with an AWS workspace to work on your project.
+      - This workspace will be used to deploy your infrastructure and applications.
+    - `AWS IAM User`: You will be provisioning your own IAM user to deploy infrastructure to your assigned AWS account.
+    - Terraform Cloud: You will be provisioning & configuring your own Terraform Cloud organization & workspace to deploy your infrastructure.
+  
+2. **`Project Management`**:
+   - **Project Lead**: The project lead is responsible for the overall project management and ensuring that the project is completed on time.
+     - **Jira**: You will be provided with Jira access to host on a board your project.
+
+3. **`Language`**:
+    - **Terraform**: Infrastrucutre as Code (IaC) tool used to deploy infrastructure.
+    - **Terraform Cloud**: Tool used to manage your Terraform state files.
+    - **Remote State**: Location where your Terraform state files will be stored. Main methond of storing state files will be in Terraform Cloud. If you are using AWS, you can also use S3 if required.
+    - **Github**: Version control system used to store your project code.
+    - **Github Actions**: Used to automate your CI/CD pipeline.
+    - **Slack**: Used for communication and collaboration with your team.
+    - **Jira**: Used to store project documentation.
+    - **Iac-hackathon-template**: This repository is a template for your project. You will be able to fork this repository and update the required information.
+
+4. **`User Workflow Architecture`**
+   - ![User Workflow Architecture](./assets/Hackathon-Workflow-user-workflow-hackathon.drawio.png)
+
+## Getting Started
 
 The purpose of this guide is to get you as soon as possible deploying infrastructure.
 
@@ -32,53 +61,52 @@ The purpose of this guide is to get you as soon as possible deploying infrastruc
     ```
 
 2. Update the CODEOWNER file to make the project Tech Lead (and others they delegate) code reviewer on the project .
-3. Read, Understand and how [Projects in TERRA are operated](https://github.com/gh-inner/Guidebook/blob/main/guides/cloud-ops/TERRA/projects-in-TERRA.md)
 
-4. Update the [versions.tf](./terraform/environments/dev/variable.tf) in the `terraform/environments/dev/variable.tf`
+3. Update the [versions.tf](./terraform/environments/dev/variable.tf) in the `terraform/environments/dev/variable.tf`
     - For ease, a copy has been provided below.
     - An image has also been provide to facilitate where these values are found.
     ![tf-mapping](./assets/tf-mapping.png)
 
-        ```terraform
-        # Configure terraform remote state
+        ```Guidehouse Hackathon
+        # Configure Guidehouse Hackathon remote state
         # This section of the provider will help set up
         # access to workspace environment variables
-        terraform {
+        Guidehouse Hackathon {
         backend "remote" {
-            organization = "terraform organization name" 
+            organization = "Guidehouse Hackathon organization name" 
 
             workspaces {
-            name = "terraform workspace name"
+            name = "Guidehouse Hackathon workspace name"
             }
         }
         }
         ```
 
-5. Scoped SPN by Provisioned RG
-   1. **SRE team: administrated and adds to your workspaces the secrets and access creds, for the time being only the Project Team Lead get a copy of the access keys**
+4. Scoped IAM User for IaC deployment
+   1. **IaC Lead : Point of Contact whom will have a dedicated iam user that will be provisioning infrastructrue through terraform cloud and will need to set the following variables up**
         - Access keys being for Azure/ AWS:
-          - `ARM_CLIENT_ID`
-          - `ARM_CLIENT_SECRET` (will be kept by the SRE Admins )
-          - `ARM_SUBSCRIPTION_ID`
-          - `ARM_TENANT_ID`
+          - `AWS_ACCESS_KEY_ID`
+          - `AWS_SECRET_ACCESS_KEY` (will be kept by the IaC lead )
+          - `AWS_REGION``
 
-6. Resources **MUST** (unless an expection is granted through Change management) consume modularized resources available by the Terraform Private Registry which is connected to the associated workspaces.
+5. Resources **should** also include tags for the following:
+    - `Project` : `Guidehouse Hackathon`
+    - `Environment` : `Dev`
+    - `Owner` : `Jane Doe`
+    - `Team` : `Jane Doe, John Smith`
 
-7. Ensure to always bring in SD-Servers, SD-SEAS, SD-Networks when needing support using PaaS services under the `TERRA` system.
+## Guidehouse Hackathon System Agreement
 
-## TERRA System Agreement
-
-Based on the information provided and your understanding of our TERRA, we kindly request your agreement and acknowledgment of the benefits outlined and pre-requisites aforementioned. Upon completion of the requiremnets this file, please drag this file with the checked the boxes provided in this document with an pull request into the [TERRA Agreement](./docs/TERRA-Agreement) folder in this repository, indicating your acceptance and signing off on the following items mentioned above.
+Based on the information provided and your understanding of our Guidehouse Hackathon, we kindly request your agreement and acknowledgment of the benefits outlined and pre-requisites aforementioned. Upon completion of the requiremnets this file, please drag this file with the checked the boxes provided in this document with an pull request into the [Guidehouse Hackathon Agreement](./docs/Guidehouse Hackathon-Agreement) folder in this repository, indicating your acceptance and signing off on the following items mentioned above.
 
 - [ ] I have updated the README.md file with the required information.
-- [ ] I have updated the CODEOWNER file to include the Tech Lead as a code reviewer.
-- [ ] I have read, understood and how Projects in TERRA are operated.
+- [ ] I have understood the pre-requisites and requirements for the Guidehouse Hackathon.
+- [ ] I have read, understood and how Projects in Guidehouse Hackathon are operated.
 - [ ] I have updated the versions.tf file with the required information.
-
 
 For any questions or concerns please email us at `cse@guidehouse.com`
 
-### Happy Coding! 🎉 - Mai (Architect & Platform Engineering Administrator)
+### Happy Coding! 🎉 - Maria Cabrera (Mai) - Solutions Architect & Platform Engineering Administrator
 
 <!-- snake interactive -->
 <p align="center">

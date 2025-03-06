@@ -43,6 +43,7 @@ Please reach out to cse@guidehouse.com
     - [Users Guide](#users-guide)
       - [Accessing the System](#accessing-the-system)
       - [Performing User Tasks](#performing-user-tasks)
+  - [Automatic Semenatic Versioning](#automatic-semenatic-versioning)
   - [Maintenance and Support](#maintenance-and-support)
   - [FAQ](#faq)
   - [Appendix](#appendix)
