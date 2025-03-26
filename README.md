@@ -12,12 +12,12 @@ Welcome to the Guidehouse Hackathon! We are excited to have you on board and loo
   
 2. **`Project Management`**:
    - **Project Lead**: The project lead is responsible for the overall project management and ensuring that the project is completed on time.
-     - **Jira**: You will be provided with Jira access to host on a board your project.
+     - **Jira**: You will be provided with Jira access to host your project on a board.
 
 3. **`Language`**:
-    - **Terraform**: Infrastrucutre as Code (IaC) tool used to deploy infrastructure.
+    - **Terraform**: Infrastructure as Code (IaC) tool used to deploy infrastructure.
     - **Terraform Cloud**: Tool used to manage your Terraform state files.
-    - **Remote State**: Location where your Terraform state files will be stored. Main methond of storing state files will be in Terraform Cloud. If you are using AWS, you can also use S3 if required.
+    - **Remote State**: Location where your Terraform state files will be stored. Main method of storing state files will be in Terraform Cloud. If you are using AWS, you can also use S3 if required.
     - **Github**: Version control system used to store your project code.
     - **Github Actions**: Used to automate your CI/CD pipeline.
     - **Slack**: Used for communication and collaboration with your team.
@@ -29,7 +29,7 @@ Welcome to the Guidehouse Hackathon! We are excited to have you on board and loo
 
 ## Getting Started
 
-The purpose of this guide is to get you as soon as possible deploying infrastructure.
+The purpose of this guide is to get you deploying infrastructure as soon as possible.
 
 1. Update the prebuilt [README.md](./docs/README.md) Which once you have completed filling out the required information, it expects you to copy and paste the contents into the README.md file in the root of your project.
     - For ease, a copy has been provided below.
@@ -97,7 +97,7 @@ The purpose of this guide is to get you as soon as possible deploying infrastruc
 
 ## Guidehouse Hackathon System Agreement
 
-Based on the information provided and your understanding of our Guidehouse Hackathon, we kindly request your agreement and acknowledgment of the benefits outlined and pre-requisites aforementioned. Upon completion of the requiremnets this file, please drag this file with the checked the boxes provided in this document with an pull request into the [Guidehouse Hackathon Agreement](./docs/Guidehouse Hackathon-Agreement) folder in this repository, indicating your acceptance and signing off on the following items mentioned above.
+Based on the information provided and your understanding of our Guidehouse Hackathon, we kindly request your agreement and acknowledgment of the benefits outlined and pre-requisites aforementioned. Upon completion of the requirements described in this file, please drag this file with the checked the boxes provided in this document with an pull request into the [Guidehouse Hackathon Agreement](./docs/Guidehouse Hackathon-Agreement) folder in this repository, indicating your acceptance and signing off on the following items mentioned above.
 
 - [ ] I have updated the README.md file with the required information.
 - [ ] I have understood the pre-requisites and requirements for the Guidehouse Hackathon.
